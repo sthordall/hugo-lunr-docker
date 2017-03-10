@@ -4,6 +4,8 @@ RUN mkdir /build \
     && cd /build \
     && npm install lunr-hugo
 
+WORKDIR /build
+
 ADD ./package.json /build/package.json
 
 ONBUILD ADD ./content /build/content
